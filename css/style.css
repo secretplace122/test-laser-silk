@@ -1399,7 +1399,7 @@ h4 {
     border-radius: var(--border-radius);
     padding: 25px;
     text-align: center;
-    border: 1px solid rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.7);
     position: relative;
 }
 

@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
             modal.classList.add('show');
             sessionStorage.setItem('modalShown', 'true');
-        }, 3000);
+        }, 15000);
     }
 
     if (closeModal) {
@@ -270,38 +270,53 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeDiode = document.getElementById('closeDiodeModal');
     const closeElectro = document.getElementById('closeElectroModal');
 
+    function disableBodyScroll() {
+        document.body.style.overflow = 'hidden';
+    }
+
+    function enableBodyScroll() {
+        document.body.style.overflow = '';
+    }
+
     if (diodeCard && diodeModal) {
         diodeCard.addEventListener('click', () => {
             diodeModal.classList.add('show');
+            disableBodyScroll();
         });
     }
 
     if (electroCard && electroModal) {
         electroCard.addEventListener('click', () => {
             electroModal.classList.add('show');
+            disableBodyScroll();
         });
     }
 
     if (closeDiode && diodeModal) {
         closeDiode.addEventListener('click', () => {
             diodeModal.classList.remove('show');
+            enableBodyScroll();
         });
     }
 
     if (closeElectro && electroModal) {
         closeElectro.addEventListener('click', () => {
             electroModal.classList.remove('show');
+            enableBodyScroll();
         });
     }
 
     window.addEventListener('click', (e) => {
         if (e.target === diodeModal) {
             diodeModal.classList.remove('show');
+            enableBodyScroll();
         }
         if (e.target === electroModal) {
             electroModal.classList.remove('show');
+            enableBodyScroll();
         }
     });
+
     const modalBookingButtons = document.querySelectorAll('.procedure-modal-content .btn-gold');
 
     modalBookingButtons.forEach(button => {
@@ -310,6 +325,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             diodeModal.classList.remove('show');
             electroModal.classList.remove('show');
+            enableBodyScroll();
 
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);

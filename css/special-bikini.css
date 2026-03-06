@@ -1,5 +1,5 @@
 .hero-special {
-    padding: 40px 0 20px;
+    padding: 20px 0 20px;
     background: linear-gradient(135deg, var(--cream) 0%, var(--white) 100%);
     text-align: center;
     position: relative;
@@ -128,7 +128,7 @@
     font-size: 1.2rem;
     color: var(--gray-dark);
     max-width: 600px;
-    margin: 0 auto 30px;
+    margin: 0 auto 10px;
 }
 
 .hero-special-features {
@@ -136,7 +136,7 @@
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
-    margin: 30px 0;
+    margin: 10px 0;
 }
 
 .feature-badge {
@@ -291,7 +291,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../../img/set1.webp');
+    background-image: url('/img/set1.webp');
     background-size: cover;
     background-position: center;
     opacity: 0.18;
@@ -308,7 +308,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../../img/set1.webp');
+    background-image: url('/img/set1.webp');
     background-size: cover;
     background-position: center;
     opacity: 0.18;
@@ -325,7 +325,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../../img/set1.webp');
+    background-image: url('/img/set1.webp');
     background-size: cover;
     background-position: center;
     opacity: 0.18;
@@ -376,18 +376,6 @@
     overflow: visible;
 }
 
-.tariff-card-popular::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
-    animation: rotate 20s linear infinite;
-    z-index: 0;
-}
-
 .tariff-card-popular::after {
     content: '★';
     position: absolute;
@@ -409,18 +397,6 @@
     box-shadow: 0 25px 50px rgba(231, 76, 60, 0.25);
     position: relative;
     overflow: visible;
-}
-
-.tariff-card-top::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(231, 76, 60, 0.15) 0%, transparent 70%);
-    animation: rotate 20s linear infinite;
-    z-index: 0;
 }
 
 .tariff-card-top::after {
@@ -490,7 +466,7 @@
     text-align: center;
     font-size: 1rem;
     color: var(--gold-dark);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: 500;
     background: rgba(212, 175, 55, 0.1);
     padding: 5px 18px;
@@ -505,7 +481,7 @@
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     flex-wrap: wrap;
 }
 
@@ -532,7 +508,7 @@
 
 .tariff-price-block {
     text-align: center;
-    margin: 25px 0;
+    margin: 15px 0;
     position: relative;
 }
 
@@ -612,14 +588,14 @@
 
 .tariff-features {
     list-style: none;
-    margin: 25px 0;
+    margin: 3px 0;
 }
 
 .tariff-features li {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 12px;
+    margin-bottom: 3px;
     font-size: 0.95rem;
     padding: 4px 8px;
     border-radius: 10px;
@@ -655,7 +631,7 @@
     transition: all 0.4s ease;
     text-decoration: none;
     text-align: center;
-    margin: 25px 0 15px;
+    margin: 10px 0 10px;
     box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4);
     position: relative;
     overflow: hidden;
@@ -1166,7 +1142,7 @@
 
     .tariff-title {
         font-size: 1.6rem;
-        margin: 20px 0 5px;
+        margin: 5px 0 5px;
     }
 
     .tariff-new-price {

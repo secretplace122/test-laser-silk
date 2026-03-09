@@ -299,7 +299,7 @@
     overflow: hidden;
 }
 
-.tariff-card > *:not(.tariff-bg-image) {
+.tariff-card>*:not(.tariff-bg-image) {
     position: relative;
     z-index: 2;
 }
@@ -352,7 +352,7 @@
     z-index: 3;
 }
 
-.tariff-card-popular > *:not(.tariff-bg-image):not(.tariff-badge) {
+.tariff-card-popular>*:not(.tariff-bg-image):not(.tariff-badge) {
     position: relative;
     z-index: 2;
 }
@@ -375,7 +375,7 @@
     z-index: 3;
 }
 
-.tariff-card-top > *:not(.tariff-bg-image):not(.tariff-badge) {
+.tariff-card-top>*:not(.tariff-bg-image):not(.tariff-badge) {
     position: relative;
     z-index: 2;
 }
@@ -395,6 +395,8 @@
     box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
     z-index: 30;
     border: 2px solid var(--white);
+    width: 70%;
+    text-align: center;
 }
 
 .tariff-card-popular .tariff-badge {
@@ -1212,6 +1214,8 @@
         padding: 5px 20px;
         font-size: 0.8rem;
         top: -40px;
+        width: 70%;
+        text-align: center;
     }
 
     .tariff-title {

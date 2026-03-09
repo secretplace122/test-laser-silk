@@ -32,7 +32,10 @@ body {
     background-color: var(--white);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-weight: 500;
     letter-spacing: 0.02em;
@@ -1589,6 +1592,16 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 768px) {
+    .abonement-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 12px;
+    }
+
+    .packages-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 12px;
+    }
+
     .procedure-modal {
         align-items: flex-start;
         padding: 10px;

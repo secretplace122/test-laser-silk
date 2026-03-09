@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Yanone+Kaffeesatz:wght@300;400;500;600;700&display=swap&subset=cyrillic');
 
 :root {
     --gold: #eec900;
@@ -32,12 +32,11 @@ body {
     background-color: var(--white);
 }
 
-h1,
-h2,
-h3,
-h4 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
+h1, h2, h3, h4 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
 }
 
 .container {
@@ -527,8 +526,8 @@ h4 {
 }
 
 .price-card-header h4 {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.3rem;
+    font-weight: 400;
 }
 
 .price-value {
@@ -659,7 +658,7 @@ h4 {
 .abonement-card {
     background: var(--white);
     border-radius: var(--border-radius);
-    padding: 25px;
+    padding: 15px;
     text-align: center;
     border: 1px solid rgba(212, 175, 55, 0.7);
     position: relative;
@@ -723,7 +722,7 @@ h4 {
     border-radius: var(--border-radius);
     padding: 25px;
     text-align: center;
-    border: 1px solid rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.7);
     position: relative;
 }
 

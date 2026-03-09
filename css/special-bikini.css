@@ -284,60 +284,24 @@
     overflow: visible;
 }
 
-#tariff-1::before {
-    content: '';
+.tariff-bg-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/img/set1.webp');
-    background-size: cover;
-    background-position: center;
+    object-fit: cover;
+    object-position: center;
     opacity: 0.18;
-    z-index: 0;
-    pointer-events: none;
-    animation: none;
-    border-radius: var(--border-radius);
-}
-
-#tariff-6::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/img/set1.webp');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.18;
-    z-index: 0;
-    pointer-events: none;
-    animation: none;
-    border-radius: var(--border-radius);
-}
-
-#tariff-10::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/img/set1.webp');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.18;
-    z-index: 0;
-    pointer-events: none;
-    animation: none;
-    border-radius: var(--border-radius);
-}
-
-.tariff-card>* {
-    position: relative;
     z-index: 1;
+    pointer-events: none;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.tariff-card > *:not(.tariff-bg-image) {
+    position: relative;
+    z-index: 2;
 }
 
 .tariff-card.active {
@@ -385,11 +349,12 @@
     color: var(--gold);
     opacity: 0.1;
     transform: rotate(15deg);
+    z-index: 3;
 }
 
-.tariff-card-popular>* {
+.tariff-card-popular > *:not(.tariff-bg-image):not(.tariff-badge) {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .tariff-card-top {
@@ -407,16 +372,17 @@
     font-size: 2.5rem;
     opacity: 0.1;
     transform: rotate(15deg);
+    z-index: 3;
 }
 
-.tariff-card-top>* {
+.tariff-card-top > *:not(.tariff-bg-image):not(.tariff-badge) {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .tariff-badge {
     position: absolute;
-    top: -18px;
+    top: -50px;
     left: 50%;
     transform: translateX(-50%);
     background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
@@ -1245,7 +1211,7 @@
     .tariff-badge {
         padding: 5px 20px;
         font-size: 0.8rem;
-        top: -16px;
+        top: -40px;
     }
 
     .tariff-title {

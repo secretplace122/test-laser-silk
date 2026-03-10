@@ -65,4 +65,53 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     `;
     document.head.appendChild(style);
+
+    function smoothScrollToElement(element, offset = 120) {
+        if (!element) return;
+        
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - offset;
+        
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+    
+    function handleHashOnLoad() {
+        const activeCard = document.querySelector('.tariff-card.active');
+        
+        if (activeCard) {
+            smoothScrollToElement(activeCard);
+        }
+    }
+    
+    function handleAnchorClicks() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                
+                const targetElement = document.querySelector(href);
+                if (targetElement && targetElement.classList.contains('tariff-card')) {
+                    e.preventDefault();
+                    
+                    history.pushState(null, null, href);
+                    
+                    if (!targetElement.classList.contains('active')) {
+                        const tariffNumber = href.replace('#tariff-', '');
+                        if (tariffNumber && tariffCards[tariffNumber]) {
+                            showTariff(tariffNumber);
+                        }
+                    }
+                    
+                    smoothScrollToElement(targetElement);
+                }
+            });
+        });
+    }
+    
+    handleHashOnLoad();
+    window.addEventListener('hashchange', handleHashOnLoad);
+    handleAnchorClicks();
 });
